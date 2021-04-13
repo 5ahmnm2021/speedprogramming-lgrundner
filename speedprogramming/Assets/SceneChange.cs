@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
+    public GameObject ErrorText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        ErrorText.SetActive(false);   
     }
 
     // Update is called once per frame
@@ -22,6 +23,10 @@ public class SceneChange : MonoBehaviour
         SceneManager.LoadScene("Scene2");
          
     }
+    public void ActivateGameObject()
+    {
+        ErrorText.SetActive(true);
+    }
 
-   
+
 }
